@@ -1,0 +1,9 @@
+task hello << {
+  String greeting = "hello from Ant"
+  ant.echo(message: greeting)
+}
+
+ant.importBuild 'build.xml'
+task antDep(dependsOn: helloAnt) <<{
+  println 'Hello from Gradle'
+}

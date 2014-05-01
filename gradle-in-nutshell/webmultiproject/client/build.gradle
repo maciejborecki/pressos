@@ -1,0 +1,9 @@
+apply plugin: 'application'
+
+dependencies{
+  compile project(':domain')
+  compile ('com.google.code.gson:gson:2.2.+')
+  compile ('org.apache.httpcomponents:httpclient:4.3.+')
+}
+
+mainClassName = 'gradlein.mp.client.Client'

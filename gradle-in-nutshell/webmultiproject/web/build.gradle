@@ -1,0 +1,19 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+      classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.2.RELEASE")
+    }
+}
+
+
+apply plugin: 'war'
+apply plugin: 'jetty'
+apply plugin: 'spring-boot'
+
+dependencies {
+  compile project(':domain')
+  compile('org.springframework:spring-web:4.0.4.RELEASE')
+  compile('org.springframework.boot:spring-boot-starter-web')
+}
