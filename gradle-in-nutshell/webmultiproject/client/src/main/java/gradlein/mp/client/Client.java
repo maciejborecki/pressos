@@ -5,7 +5,6 @@ import gradlein.mp.domain.Person;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 
 import org.apache.http.Header;
 import org.apache.http.client.ClientProtocolException;

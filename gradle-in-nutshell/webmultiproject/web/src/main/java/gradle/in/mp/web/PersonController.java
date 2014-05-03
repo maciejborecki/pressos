@@ -46,7 +46,7 @@ public class PersonController {
 	}
 
 	@RequestMapping("/persons")
-	public @ResponseBody Collection<Person> getPerson() {
+	public @ResponseBody Collection<Person> getPersons() {
 		return this.persons.values();
 	}
 
