@@ -1,0 +1,11 @@
+target/
+build/
+*.jar
+*.war
+*.class
+.project
+.classpath
+.settings/
+bin/
+*.swp
+.gradle/
