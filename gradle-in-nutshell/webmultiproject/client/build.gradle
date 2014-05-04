@@ -1,3 +1,6 @@
+/*
+ * Author: Maciej Borecki
+ */
 apply plugin: 'application'
 
 dependencies{
@@ -7,3 +10,5 @@ dependencies{
 }
 
 mainClassName = 'gradlein.mp.client.Client'
+
+integrationTest.dependsOn ':web:bootRun'

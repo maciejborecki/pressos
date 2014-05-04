@@ -1,5 +1,6 @@
 package gradle.in.mp.web;
 
+
 import gradlein.mp.domain.Person;
 
 import java.util.Collection;
@@ -20,6 +21,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.util.UriComponentsBuilder;
 
+/**
+ * 
+ * @author Maciej Borecki
+ *
+ */
 @Controller
 public class PersonController {
 

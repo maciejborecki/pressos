@@ -1,9 +1,17 @@
-task hello << {
-  String greeting = "hello from Ant"
-  ant.echo(message: greeting)
-}
-
 ant.importBuild 'build.xml'
+//1.
+task callAntTask << {
+  ant.echo "Nice... ant called from within gradle"
+}
+//2.
 task antDep(dependsOn: helloAnt) <<{
   println 'Hello from Gradle'
 }
+//3.
+/*
+helloAnt << {
+        println "hooking with 'doLast' to ant task"
+}
+*/
+
+

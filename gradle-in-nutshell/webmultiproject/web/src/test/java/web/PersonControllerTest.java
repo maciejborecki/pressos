@@ -9,6 +9,11 @@ import org.junit.Test;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.util.UriComponentsBuilder;
 
+/**
+ * 
+ * @author Maciej Borecki
+ *
+ */
 public class PersonControllerTest {
 	private PersonController pContoler;
 
