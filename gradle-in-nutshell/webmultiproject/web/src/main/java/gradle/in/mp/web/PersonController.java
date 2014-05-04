@@ -37,7 +37,7 @@ public class PersonController {
 		long id = idCounter.get();
 		this.persons.put(id, new Person(id, "John", "Doe"));
 		id = idCounter.incrementAndGet();
-		this.persons.put(id, new Person(id, "Bill", "Clinton"));
+		this.persons.put(id, new Person(id, "Jane", "Roe"));
 	}
 
 	@RequestMapping("/persons/{id}")
