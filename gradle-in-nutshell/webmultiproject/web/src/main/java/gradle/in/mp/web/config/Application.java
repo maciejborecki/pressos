@@ -1,6 +1,5 @@
-package gradle.in.mp.web;
+package gradle.in.mp.web.config;
 
-import org.springframework.context.annotation.ComponentScan;
 
 /**
  * 

@@ -1,27 +1,38 @@
+import javax.security.auth.login.Configuration;
+
 /*
  * Author: Maciej Borecki
  */
 /*
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-      classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.2.RELEASE")
-    }
-}
-*/
+ buildscript {
+ repositories {
+ mavenCentral()
+ }
+ dependencies {
+ classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.2.RELEASE")
+ }
+ }
+ */
 
 apply plugin: 'war'
 apply plugin: 'jetty'
 //apply plugin: 'spring-boot'
 
-groupId = 'gradlein.mp'
-artifactId = 'web'
-version = '0.1.0'
 
 dependencies {
   compile project(':domain')
   compile('org.springframework:spring-web:4.0.4.RELEASE')
+  integTest project(':client')
   //compile('org.springframework.boot:spring-boot-starter-web')
+}
+
+integrationTest () {
+  doFirst{
+    jettyRun.deamon = true
+    jettyRun.execute()
+    classpath = configurations.main
+  }
+  doLast {
+    jettyStop.execute();
+  }
 }
