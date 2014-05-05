@@ -20,7 +20,7 @@ public class ClientIntegTest {
 
 	@Test
 	public void testDefaultSize() throws ClientProtocolException, IOException {
-		assertEquals(2, client.list());
+		assertEquals(2, client.list().size());
 	}
 
 }

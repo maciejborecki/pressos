@@ -3,8 +3,6 @@
  */
 apply plugin: 'application'
 
-groupId = 'gradlein.mp'
-artifactId = 'client'
 version = '0.1.0'
 
 dependencies{

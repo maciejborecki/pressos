@@ -27,7 +27,7 @@ import com.google.gson.reflect.TypeToken;
  */
 public class Client {
 
-	private static final String HOST = "http://localhost:8080/";
+	private static final String HOST = "http://localhost:8080/web/";
 
 	private CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 	private CloseableHttpResponse response;
