@@ -3,6 +3,10 @@
  */
 apply plugin: 'application'
 
+groupId = 'gradlein.mp'
+artifactId = 'client'
+version = '0.1.0'
+
 dependencies{
   compile project(':domain')
   compile ('com.google.code.gson:gson:2.2.+')
@@ -11,4 +15,4 @@ dependencies{
 
 mainClassName = 'gradlein.mp.client.Client'
 
-integrationTest.dependsOn ':web:bootRun'
+//integrationTest.dependsOn ':web:bootRun'

@@ -15,4 +15,4 @@ task integrationTest(type: Test) {
   classpath = sourceSets.integTest.runtimeClasspath
 }
 
-check.dependsOn integrationTest
+//check.dependsOn integrationTest

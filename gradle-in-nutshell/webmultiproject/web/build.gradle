@@ -1,7 +1,7 @@
 /*
  * Author: Maciej Borecki
  */
-
+/*
 buildscript {
     repositories {
         mavenCentral()
@@ -10,14 +10,18 @@ buildscript {
       classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.2.RELEASE")
     }
 }
-
+*/
 
 apply plugin: 'war'
 apply plugin: 'jetty'
-apply plugin: 'spring-boot'
+//apply plugin: 'spring-boot'
+
+groupId = 'gradlein.mp'
+artifactId = 'web'
+version = '0.1.0'
 
 dependencies {
   compile project(':domain')
   compile('org.springframework:spring-web:4.0.4.RELEASE')
-  compile('org.springframework.boot:spring-boot-starter-web')
+  //compile('org.springframework.boot:spring-boot-starter-web')
 }
