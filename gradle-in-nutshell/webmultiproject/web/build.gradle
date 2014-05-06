@@ -17,18 +17,25 @@ dependencies {
   compile project(':domain')
   compile('org.springframework:spring-web:4.0.4.RELEASE')
   compile('org.springframework:spring-webmvc:4.0.4.RELEASE')
+  compile('org.codehaus.jackson:jackson-mapper-asl:1.9.13')
+  compile ('com.google.code.gson:gson:2.2.+')
   integTest project(':client')
-  //  compile('org.springframework.boot:spring-boot-starter-web')
+//  compile('org.springframework.boot:spring-boot-starter-web')
 }
 
 integrationTest () {
   doFirst{
+	println "Starting jetty as a daemon"
     jettyRun.daemon = true
     jettyRun.execute()
     jettyRun.stopPort=8081
     jettyRun.stopKey="STOP"
   }
+  
   doLast {  
+	println "Stopping jetty"
+	jettyStop.stopPort=8081
+	jettyStop.stopKey="STOP"
     jettyStop.execute() 
   }
 }

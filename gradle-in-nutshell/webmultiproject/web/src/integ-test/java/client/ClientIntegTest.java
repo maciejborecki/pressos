@@ -22,5 +22,12 @@ public class ClientIntegTest {
 	public void testDefaultSize() throws ClientProtocolException, IOException {
 		assertEquals(2, client.list().size());
 	}
+	
+	@Test
+	public void testAddNewPerson() throws ClientProtocolException, IOException {
+		client.add("xx", "yy");
+		assertEquals(3, client.list().size());
+	}
+
 
 }

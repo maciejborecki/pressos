@@ -1,15 +1,19 @@
 <web-app>
+
 	<servlet>
-		<servlet-name>rest-api</servlet-name>
+		<servlet-name>rest</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet
 		</servlet-class>
+		<!-- <init-param> <param-name>contextClass</param-name> <param-value> org.springframework.web.context.support.AnnotationConfigWebApplicationContext 
+			</param-value> </init-param> <init-param> <param-name>contextConfigLocation</param-name> 
+			<param-value>gradle.in.mp.web.config.Application</param-value> </init-param> -->
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/spring.xml</param-value>
+			<param-value>/WEB-INF/rest-spring.xml</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>rest-api</servlet-name>
-		<url-pattern>/</url-pattern>
+		<servlet-name>rest</servlet-name>
+		<url-pattern>/*</url-pattern>
 	</servlet-mapping>
 </web-app>

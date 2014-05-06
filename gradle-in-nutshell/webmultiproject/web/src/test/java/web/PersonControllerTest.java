@@ -31,7 +31,7 @@ public class PersonControllerTest {
 	@Test
 	public void testAdd(){
 		System.out.println("testAdd");
-		ResponseEntity<Person> personWrapper = pContoler.addPerson(new Person(
+		ResponseEntity<Person> personWrapper = pContoler.addPerson(new Person(0l,
 				"Chris", "Christopher"), UriComponentsBuilder.newInstance());
 		assertEquals(3, pContoler.getPersons().size());
 		Person lastPerson = this.pContoler.getPerson(personWrapper.getBody().getId()).getBody();

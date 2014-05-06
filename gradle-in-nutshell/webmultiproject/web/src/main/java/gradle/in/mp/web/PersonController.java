@@ -39,6 +39,12 @@ public class PersonController {
 		id = idCounter.incrementAndGet();
 		this.persons.put(id, new Person(id, "Jane", "Roe"));
 	}
+	
+	@RequestMapping("/*")
+	@ResponseBody
+	public String defaultResponse(){
+		return "default mapping";
+	}
 
 	@RequestMapping("/persons/{id}")
 	public @ResponseBody ResponseEntity<Person> getPerson(
@@ -51,8 +57,9 @@ public class PersonController {
 		}
 	}
 
-	@RequestMapping("/persons")
-	public @ResponseBody Collection<Person> getPersons() {
+	@RequestMapping(value="/persons")
+	@ResponseBody
+	public  Collection<Person> getPersons() {
 		return this.persons.values();
 	}
 
